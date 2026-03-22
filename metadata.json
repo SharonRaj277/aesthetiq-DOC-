@@ -1,0 +1,8 @@
+{
+  "name": "AesthetiQ Doctor",
+  "description": "Premium Aesthetic Doctor Portal for consultation management, patient tracking, and AI-powered scan analysis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

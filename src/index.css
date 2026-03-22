@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #7C3AED;
+  --color-primary-light: #A855F7;
+  --color-primary-dark: #5B21B6;
+  --color-background: #F8F7FF;
+  --color-dark-bg: #1A1035;
+  --color-text-primary: #1E1B4B;
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+  
+  --shadow-premium: 0 4px 16px rgba(124, 58, 237, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-[#F8F7FF] text-[#1E1B4B] font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/85 backdrop-blur-md rounded-[24px] border-[1.5px] border-white/90 shadow-premium;
+  }
+  
+  .btn-primary {
+    @apply h-[56px] rounded-[28px] bg-gradient-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold flex items-center justify-center transition-all active:scale-95 shadow-lg shadow-primary/20;
+  }
+  
+  .btn-secondary {
+    @apply h-[48px] rounded-[24px] border-[1.5px] border-[#7C3AED] bg-white text-[#7C3AED] font-bold flex items-center justify-center transition-all active:scale-95;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
